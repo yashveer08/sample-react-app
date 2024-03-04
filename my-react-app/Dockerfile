@@ -1,6 +1,8 @@
 # Use an official Node.js runtime as a base image
 FROM node:20
 
+RUN npm install -g create-react-app
+
 # Set the working directory in the container
 WORKDIR /usr/src/app
 
@@ -10,9 +12,9 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
-RUN npm uninstall react-scripts
+# RUN npm uninstall react-scripts
 
-RUN npm install -D react-scripts
+# RUN npm install -D react-scripts
 
 # Copy the rest of the application
 COPY . .
