@@ -10,6 +10,10 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
+RUN npm uninstall react-scripts
+
+RUN npm install -D react-scripts
+
 # Copy the rest of the application
 COPY . .
 
