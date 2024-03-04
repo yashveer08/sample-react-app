@@ -1,7 +1,7 @@
 # Use an official Node.js runtime as a base image
 FROM node:20
 
-RUN npm install -g create-react-app
+RUN npm install create-react-app
 
 # Set the working directory in the container
 WORKDIR /usr/src/app
